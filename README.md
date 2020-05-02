@@ -10,3 +10,13 @@ git push origin master
 ```
 git status
 ```
+### Data Links:
+ 
+#### Instructions to get eICU postgres locally
+https://eicu-crd.mit.edu/tutorials/install_eicu_locally/
+
+#### Article
+https://www.nature.com/articles/sdata2018178
+
+#### Schema 
+https://mit-lcp.github.io/eicu-schema-spy/
