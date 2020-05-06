@@ -1,0 +1,45 @@
+#How many unique hospitals? how many ICUs? 
+
+Select COUNT (DISTINCT hospitalid)
+from `physionet-data.eicu_crd.hospital`
+
+Select COUNT (DISTINCT wardid )
+from `physionet-data.eicu_crd.patient` 
+
+#How many procedures have ICD9/10 codes available?
+select count (distinct diagnosisid)
+from `physionet-data.eicu_crd.diagnosis` 
+where icd9code is not null
+
+##How many procedures have ICD9/10 codes available?
+select diagnosisstring,icd9code,count(*)
+from `physionet-data.eicu_crd.diagnosis` 
+where icd9code is not null
+group by diagnosisstring, icd9code##
+
+#What are the top 10 diseases that patients suffer from? 
+select icd9code, count(icd9code), diagnosisstring
+from `physionet-data.eicu_crd.diagnosis` 
+group by icd9code, diagnosisstring 
+order by count(icd9code) desc
+limit 10;  # NOT SURE HOW TO TREAT MISSING VALUES
+
+select apacheadmissiondx, count(apacheadmissiondx)
+from `physionet-data.eicu_crd.patient` 
+group by apacheadmissiondx 
+order by count(apacheadmissiondx) desc
+limit 10;
+
+#Identify all the patients with heart disease 
+	* Can be patients admitted on drugs that treat heart disease (can find just a subset)
+select gender, age, ethnicity,apacheadmissiondx,admissionheight,drugname
+from `physionet-data.eicu_crd.admissiondrug` a
+join `physionet-data.eicu_crd.patient` b ON (
+a.patientunitstayid =b.patientunitstayid
+)
+where drugname like '%CLOPIDOGREL%'
+
+#Identify all the patients that were admitted and on diabetes drugs (what are these?)
+	* Find the unique drugs and figure out which are diabetes usually
+    
+    
