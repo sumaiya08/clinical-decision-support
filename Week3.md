@@ -8,8 +8,9 @@
 6. Figure 6
 7. Figure 7
 8. Figure 8
+
 ###mortality rate = deaths of particular race & age / total number of same race & age
 9. table 1,2,3,4
 10. figure 9 (try query, talk with nabila abt it)
-## upload notebook on colab (IMPORTANT) Done 
-## datediff wid nabila (Figuredgit)
+# upload notebook on colab (IMPORTANT) Done 
+# datediff wid nabila (Figured)
