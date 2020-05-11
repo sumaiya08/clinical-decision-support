@@ -1,7 +1,7 @@
 #How many unique hospitals? how many ICUs? 
 
 Select COUNT (DISTINCT hospitalid)
-from `physionet-data.eicu_crd.hospital`
+from `physionet-data.eicu_crd.hospital`;
 
 Select COUNT (DISTINCT wardid )
 from `physionet-data.eicu_crd.patient` 
@@ -37,9 +37,49 @@ from `physionet-data.eicu_crd.admissiondrug` a
 join `physionet-data.eicu_crd.patient` b ON (
 a.patientunitstayid =b.patientunitstayid
 )
-where drugname like '%CLOPIDOGREL%'
+where drugname like '%CLOPIDOGREL%' # can also look for drug WARFARIN
 
 #Identify all the patients that were admitted and on diabetes drugs (what are these?)
 	* Find the unique drugs and figure out which are diabetes usually
-    
-    
+ 
+select gender,age,ethnicity,apacheadmissiondx,admissionheight,drugname
+from `physionet-data.eicu_crd.admissiondrug` a
+join `physionet-data.eicu_crd.patient` b ON (
+a.patientunitstayid =b.patientunitstayid
+)
+where drugname like '%GLUCAGON%'    #can also look for drug HUMULIN
+
+#What types of visits do patients come to the ICU for? (ie unique procedures) top 5 identify all the patients with 3 types of heart procedures 
+select treatmentstring, count (treatmentstring)
+from `physionet-data.eicu_crd.treatment` 
+group by treatmentstring
+order by count(treatmentstring) desc
+limit 5;
+select gender,age,ethnicity,apacheadmissiondx,treatmentstring
+from `physionet-data.eicu_crd.treatment`  a
+join `physionet-data.eicu_crd.patient` b ON (
+a.patientunitstayid =b.patientunitstayid
+)
+where a.treatmentstring  like '%cardio%'
+#What is the average length of stay for most patients in the ICU? 
+	* Can you check the above for patients that are diabetic + patients that suffer from heart disease?
+#What is the average length of stay for most patients in the ICU? 
+select patienthealthsystemstayid, TIME_DIFF(unitdischargetime24,unitadmittime24, second) as lengthofstay
+from `physionet-data.eicu_crd.patient` 
+group by patienthealthsystemstayid , lengthofstay
+limit 10;
+
+select patienthealthsystemstayid, SUM(TIME_DIFF(hospitaldischargetime24,hospitaladmittime24, minute)) AS lengthofstay, uniquepid
+from `physionet-data.eicu_crd.patient` 
+group by patienthealthsystemstayid, uniquepid
+ORDER BY uniquepid
+limit 10;
+#How many patients with diabetes and how many patients with heart disease die before they are released from their stay? 
+#	* Possible to plot the progression?
+select gender, age, ethnicity,apacheadmissiondx,hospitaldischargestatus
+from `physionet-data.eicu_crd.patient` 
+where apacheadmissiondx like '%Cardi%' and hospitaldischargestatus like '%Expire%';
+
+select gender, age, ethnicity,apacheadmissiondx,hospitaldischargestatus
+from `physionet-data.eicu_crd.patient` 
+where apacheadmissiondx like '%Diab%' and hospitaldischargestatus like '%Expire%'
