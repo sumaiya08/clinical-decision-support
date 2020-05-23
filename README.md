@@ -1,22 +1,11 @@
-# medicaldata
+# Clinical decision support on eICU dataset
 
-### Steps to commit 
-```
-git add . 
-git commit -m "enter a message here" 
-git push origin master
-```
-### How to check status of staging area
-```
-git status
-```
-### Data Links:
+### Data access 
+* We are using the eICU database v2.0. This database requires credential access. Sign up [here](https://eicu-crd.mit.edu/) 
+
+
+### Some important data Links:
  
-#### Instructions to get eICU postgres locally
-https://eicu-crd.mit.edu/tutorials/install_eicu_locally/
-
-#### Article
-https://www.nature.com/articles/sdata2018178
-
-#### Schema 
-https://mit-lcp.github.io/eicu-schema-spy/
+* [Instructions to get eICU postgres locally](https://eicu-crd.mit.edu/tutorials/install_eicu_locally/)
+* [Official paper explaining dataset](https://www.nature.com/articles/sdata2018178)
+* [Database schema](https://mit-lcp.github.io/eicu-schema-spy/)
