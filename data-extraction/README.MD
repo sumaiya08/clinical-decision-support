@@ -1,7 +1,11 @@
 ### Data extraction 
 
 * Features for mortality prediction and length of stay prediction are replicated according to [this work](https://arxiv.org/pdf/1910.00964v2.pdf)
-* We are operating on eICU database v2.0
+* Different from the authors, we are operating on eICU database v2.0
+
+#### Extraction
+
+* Run `extract-features.ipynb` with eICU credentials to download `rawdata.csv` file
 * Summary of features and tables where the feature was extracted from are as follows:
 
 | Feature 					| Table location 	| Data type |
