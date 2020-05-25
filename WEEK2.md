@@ -12,7 +12,7 @@ https://mit-lcp.github.io/eicu-schema-spy/
 	* Can be patients admitted on drugs that treat heart disease (can find just a subset)
 5. Identify all the patients that were admitted and on diabetes drugs (what are these?)
 	* Find the unique drugs and figure out which are diabetes usually
-6. What types of visits do patients come to the ICU for? (ie unique procedures)
+6. What types of visits do patients come to the ICU for? (ie unique procedures) top 5
 identify all the patients with 3 types of heart procedures 
 7. What is the average length of stay for most patients in the ICU? 
 	* Can you check the above for patients that are diabetic + patients that suffer from heart disease? 
