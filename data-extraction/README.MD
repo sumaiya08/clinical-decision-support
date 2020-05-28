@@ -10,23 +10,23 @@
 
 | Feature 					| Table location 	| Data type |
 | --- 						| --- 				| --- 		| 
-| Heart rate 				| 					| Numerical	| 
+| Heart rate 				| apacheapsvar		| Numerical	| 
 | Mean arterial pressure  	| 					| Numerical	|
 | Diastolic blood pressure	| 					| Numerical	|	
 | Systolic blood pressure 	| 					| Numerical	|
-| O2 						| 					| Numerical	| 
-| Respiratory rate 			| 					| Numerical	| 
-| Temperature 				| 					| Numerical | 
-| Glucose 					| 					| Numerical	| 
-| FiO2						| 					| Numerical	| 
-| pH 						| 					| Numerical	| 
-| Height 					| 					| Numerical	| 
-| Weight 					| 					| Numerical	| 
-| Age 						| 					| Numerical	| 
-| Admission diagnosis 		| 					| Categorical| 
-| Ethnicity 				| 					| Categorical|
-| Gender 					| 					| Categorical| 
+| O2 						| apacheapsvar		| Numerical	| 
+| Respiratory rate 			| apacheapsvar		| Numerical	| 
+| Temperature 				| apacheapsvar		| Numerical | 
+| Glucose 					| apacheapsvar		| Numerical	| 
+| FiO2						| apacheapsvar		| Numerical	| 
+| pH 						| apacheapsvar		| Numerical	| 
+| Height 					| patient			| Numerical	| 
+| Weight 					| patient			| Numerical	| 
+| Age 						| patient			| Numerical	| 
+| Admission diagnosis 		| patient			| Categorical| 
+| Ethnicity 				| patient			| Categorical|
+| Gender 					| patient			| Categorical| 
 | Glasgow Coma Score Total  | 					| Categorical| 
-| Glasgow Coma Score Eyes	| 					| Categorical| 
-| Glasgow Coma Score Motor  | 					| Categorical| 
-| Glasgow Coma Score Verbal	| 					| Categorical| 
+| Glasgow Coma Score Eyes	| apacheapsvar		| Categorical| 
+| Glasgow Coma Score Motor  | apacheapsvar		| Categorical| 
+| Glasgow Coma Score Verbal	| apacheapsvar		| Categorical| 
