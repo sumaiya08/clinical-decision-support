@@ -11,9 +11,9 @@
 | Feature 					| Table location 	| Data type |
 | --- 						| --- 				| --- 		| 
 | Heart rate 				| apacheapsvar		| Numerical	| 
-| Mean arterial pressure  	| 					| Numerical	|
-| Diastolic blood pressure	| 					| Numerical	|	
-| Systolic blood pressure 	| 					| Numerical	|
+| Mean arterial pressure  	| formula        	| Numerical	|
+| Diastolic blood pressure	| vitalaperiodic	| Numerical	|	
+| Systolic blood pressure 	| vitalaperiodic	| Numerical	|
 | O2 						| apacheapsvar		| Numerical	| 
 | Respiratory rate 			| apacheapsvar		| Numerical	| 
 | Temperature 				| apacheapsvar		| Numerical | 
@@ -26,7 +26,10 @@
 | Admission diagnosis 		| patient			| Categorical| 
 | Ethnicity 				| patient			| Categorical|
 | Gender 					| patient			| Categorical| 
-| Glasgow Coma Score Total  | 					| Categorical| 
-| Glasgow Coma Score Eyes	| apacheapsvar		| Categorical| 
-| Glasgow Coma Score Motor  | apacheapsvar		| Categorical| 
-| Glasgow Coma Score Verbal	| apacheapsvar		| Categorical| 
+| Glasgow Coma Score Total  | 					| Numerical| 
+| Glasgow Coma Score Eyes	| apacheapsvar		| Numerical| 
+| Glasgow Coma Score Motor  | apacheapsvar		| Numerical| 
+| Glasgow Coma Score Verbal	| apacheapsvar		| Numerical| 
+
+mean arterial pressure = SBP + 2(DBP)
+GCS total = GCS sum of eyes, motor, verbal
