@@ -12,9 +12,9 @@
 | --- 						| --- 				| --- 		| 
 | Heart rate 				| apacheapsvar		| Numerical	| 
 | Mean arterial pressure  	| formula        	| Numerical	|
-| Diastolic blood pressure	| vitalaperiodic	| Numerical	|	
-| Systolic blood pressure 	| vitalaperiodic	| Numerical	|
-| O2 						| apacheapsvar		| Numerical	| 
+| Diastolic blood pressure	| vitalperiodic 	| Numerical	|	
+| Systolic blood pressure 	| vitalperiodic  	| Numerical	|
+| O2 						| lab       		| Numerical	| 
 | Respiratory rate 			| apacheapsvar		| Numerical	| 
 | Temperature 				| apacheapsvar		| Numerical | 
 | Glucose 					| apacheapsvar		| Numerical	| 
@@ -26,10 +26,13 @@
 | Admission diagnosis 		| patient			| Categorical| 
 | Ethnicity 				| patient			| Categorical|
 | Gender 					| patient			| Categorical| 
-| Glasgow Coma Score Total  | 					| Numerical| 
+| Glasgow Coma Score Total  | formula			| Numerical| 
 | Glasgow Coma Score Eyes	| apacheapsvar		| Numerical| 
 | Glasgow Coma Score Motor  | apacheapsvar		| Numerical| 
 | Glasgow Coma Score Verbal	| apacheapsvar		| Numerical| 
 
-mean arterial pressure = SBP + 2(DBP)
+mean arterial pressure = SBP + 2(DBP) /3
 GCS total = GCS sum of eyes, motor, verbal
+normalization 
+logistic regression , check metrics (table 5)
+try linear regression on length of stay (days)
