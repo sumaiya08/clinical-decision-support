@@ -31,8 +31,6 @@
 | Glasgow Coma Score Motor  | apacheapsvar		| Numerical| 
 | Glasgow Coma Score Verbal	| apacheapsvar		| Numerical| 
 
-mean arterial pressure = SBP + 2(DBP) /3
-GCS total = GCS sum of eyes, motor, verbal
-normalization 
-logistic regression , check metrics (table 5)
-try linear regression on length of stay (days)
+#### Formula used in the table
+                   mean arterial pressure = SBP + 2(DBP) /3
+                   GCS total = GCS sum of eyes, motor, verbal
