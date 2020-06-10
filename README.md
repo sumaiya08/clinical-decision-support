@@ -10,6 +10,7 @@
 * [Official paper explaining dataset](https://www.nature.com/articles/sdata2018178)
 * [Database schema](https://mit-lcp.github.io/eicu-schema-spy/)
 * [Table information](https://eicu-crd.mit.edu/eicutables/patient/)
+
 ### Data extraction 
 
 * Features for mortality prediction and length of stay prediction are replicated according to [this work](https://arxiv.org/pdf/1910.00964v2.pdf)
