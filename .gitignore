@@ -1,3 +1,7 @@
 *.DS_Store
 /__pycache__/
 mortality_pred_dl.py
+mortality_pred_ml.py
+WEEK2.md
+Week3.md
+
